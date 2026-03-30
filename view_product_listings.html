@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Product Listings</title>
+</head>
+<body>
+    <header>
+        <img src="farmer_logo.jpg" alt="EcoCultivate Logo">
+        <h1>Your Product Listings</h1>
+    </header>
+    <main>
+        <h2>My Products</h2>
+        <div id="productListings">
+            <div class="product-listing">
+                <h3>Product Name: Apples</h3>
+                <p>Description: Fresh and organic apples.</p>
+                <p>Price: Rs.250/-per kg</p>
+                <p>Quantity: 2 kg</p>
+            </div>
+            <div class="product-listing">
+                <h3>Product Name: Tomatoes</h3>
+                <p>Description: Ripe and juicy tomatoes.</p>
+                <p>Price: Rs.300/- per kg</p>
+                <p>Quantity: 5 kg</p>
+            </div>
+            <!-- Additional products can be added here -->
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 EcoCultivate</p>
+    </footer>
+    
+
+<script>
+    // Fetch product listings from the backend
+    fetch('/get-products')
+        .then(response => response.json())
+        .then(products => {
+            const productList = document.getElementById('productList');
+            products.forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.textContent = `${product.name} - $${product.price}`;
+                productList.appendChild(productElement);
+            });
+        })
+</script>
+</body>
+</html>

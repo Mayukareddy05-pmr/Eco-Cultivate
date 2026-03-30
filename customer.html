@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Customer Dashboard</title>
+</head>
+<body>
+    <header>
+        <img src="customer_logo.jpg.jpeg" alt="EcoCultivate Logo">
+        <h1>Customer Dashboard</h1>
+    </header>
+    <main>
+        <h2>Welcome, <span id="userName"></span>!</h2>
+        <h3>Your Actions:</h3>
+        <ul>
+            <li><a href="browse_products.html">Browse Products from Farmers</a></li>
+            <li><a href="view_orders.html">View Your Orders</a></li>
+            <li><a href="contact_farmers.html">Contact Farmers</a></li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 EcoCultivate</p>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        document.getElementById('userName').textContent = name || 'Customer';
+    </script>
+</body>
+</html>

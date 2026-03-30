@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Upload Products</title>
+</head>
+<body>
+    <header>
+        <img src="farmer_logo.jpg" alt="EcoCultivate Logo">
+        <h1>Upload Products</h1>
+    </header>
+    <main>
+        <h2>Upload Your Product</h2>
+        <form id="uploadProductForm">
+            <input type="text" placeholder="Product Name" required>
+            <input type="text" placeholder="Description" required>
+            <input type="number" placeholder="Price" required>
+            <input type="number" placeholder="Quantity" required>
+            <button type="submit">Upload</button>
+        </form>
+        <h3>Search Products</h3>
+        <input type="text" id="searchInput" placeholder="Search for products...">
+    </main>
+    <footer>
+        <p>&copy; 2024 EcoCultivate</p>
+    </footer>
+
+    <script>
+        document.getElementById('uploadProductForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Here you would handle the product upload (e.g., send to a backend)
+            alert('Product uploaded successfully!');
+            // Reset the form after upload
+            event.target.reset();
+        });
+    </script>
+</body>
+</html>

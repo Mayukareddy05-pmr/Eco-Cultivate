@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Upload Land Details</title>
+</head>
+<body>
+    <header>
+        <img src="landlord_logo.jpg.jpeg" alt="EcoCultivate Logo">
+        <h1>Upload Land Details</h1>
+    </header>
+    <main>
+        <h2>Add Your Land Details</h2>
+        <form id="uploadLandForm">
+            <input type="text" placeholder="Location" required>
+            <input type="number" placeholder="Acres of Land" required>
+            <input type="text" placeholder="Landlord Name" required>
+            <input type="text" placeholder="Contact Number" required>
+            <input type="upload land image" placeholder="image" required>
+            <button type="submit">Upload</button>
+        </form>
+        <h3>Additional Details</h3>
+        <button id="addDetailsButton">Add More Details</button>
+        <div id="additionalDetailsContainer" style="display: none;">
+            <textarea placeholder="Enter additional information here..."></textarea>
+            <button id="saveDetailsButton">Save Details</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 EcoCultivate</p>
+    </footer>
+
+    <script>
+        document.getElementById('uploadLandForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Handle the land upload (e.g., send to a backend)
+            alert('Land details uploaded successfully!');
+            event.target.reset();
+        });
+
+        document.getElementById('addDetailsButton').addEventListener('click', function() {
+            const container = document.getElementById('additionalDetailsContainer');
+            container.style.display = container.style.display === 'none' ? 'block' : 'none';
+        });
+
+        document.getElementById('saveDetailsButton').addEventListener('click', function() {
+            alert('Additional details saved!');
+            document.getElementById('additionalDetailsContainer').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

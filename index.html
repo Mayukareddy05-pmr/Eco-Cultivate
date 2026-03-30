@@ -1,0 +1,165 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Cultivate</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      outline: 2px solid #4CAF50; /* Outline around the entire page */
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      outline: 2px solid #333; /* Outline around the header */
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      background-color: #333;
+      outline: 2px solid #4CAF50; /* Outline around the navigation bar */
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+      padding: 20px;
+      outline: 2px solid #4CAF50; /* Outline around the main container */
+    }
+
+    .interface {
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 30%;
+      background-color: white;
+      border-radius: 5px;
+      text-align: center;
+      outline: 2px solid #4CAF50; /* Outline around each interface box */
+    }
+
+    .interface h2 {
+      color: #4CAF50;
+    }
+
+    .interface button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .interface button:hover {
+      background-color: #45a049;
+    }
+
+    .about-us {
+      text-align: center;
+      margin: 50px 20px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      outline: 2px solid #4CAF50; /* Outline around the About Us section */
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      outline: 2px solid #4CAF50; /* Outline around the footer */
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <!-- Replace 'logo.png' with your actual logo -->
+  <img src="eco_cultivate.jpg1.jpg" alt="Eco Cultivate Logo">
+  <h1>Welcome to Eco Cultivate</h1>
+</header>
+
+<nav>
+  <a href="farmer.html">Farmer</a>
+  <a href="customer.html">Customer</a>
+  <a href="landlord.html">Landlord</a>
+</nav>
+
+<div class="container">
+  <div class="interface">
+    <h2>Farmer</h2>
+    <p>Upload and manage your products.</p>
+    <button onclick="location.href='login.html'">Access Farmer Interface</button>
+  </div>
+
+  <div class="interface">
+    <h2>Customer</h2>
+    <p>Browse and buy products from farmers.</p>
+    <button onclick="location.href='login.html'">Access Customer Interface</button>
+  </div>
+
+  <div class="interface">
+    <h2>Landlord</h2>
+    <p>Offer land for cultivation.</p>
+    <button onclick="location.href='login.html'">Access Landlord Interface</button>
+  </div>
+</div>
+
+<!-- About Us Section -->
+<div class="about-us">
+  <h2>About Us</h2>
+  <p>
+    Eco Cultivate is a platform that connects farmers, customers, and landlords to promote sustainable agriculture.
+    Our mission is to empower farmers by providing them access to land and markets, enabling them to sell their produce
+    directly to customers. By bridging this gap, we aim to create a more eco-friendly and transparent food system that benefits everyone.
+  </p>
+  <p>
+    Whether you're a farmer looking to expand your business, a customer looking for fresh, locally grown produce,
+    or a landlord with land to offer, Eco Cultivate is here to support you every step of the way.
+  </p>
+</div>
+
+<footer>
+  <p>&copy; 2024 Eco Cultivate. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+
+
+
+</body>
+</html>
